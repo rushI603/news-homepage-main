@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+body {
+    padding: 0px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.icon {
+    height: 50px;
+}
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+.navbar li:last-child {
+    padding-right: 0px;
+}
+.content h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+.content .para {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.content .para button {
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: hsl(5, 85%, 63%);
+}
+.new-class {
+    background-color: black;
+}
+.new-class h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: hsl(35, 77%, 62%);
+    font-weight: 800;
+}
+
+.new-class .section h2 {
+    color: white;
+}
