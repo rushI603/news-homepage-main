@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    font-family: 'Inter', sans-serif;
+}
 
 body {
-    padding: 0px 20px;
+    padding: 0px 10%;
 }
 
 .navbar {
@@ -20,15 +26,29 @@ body {
 .navbar li:last-child {
     padding-right: 0px;
 }
+
+.content {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.content img {
+    grid-column: span 2;
+    width: 100%;
+}
+
 .content h1{
+    margin: 0;
     font-family: 'Inter', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
 }
 .content .para {
+    padding-bottom: 40px;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .content .para button {
@@ -36,18 +56,69 @@ body {
     color: white;
     text-transform: uppercase;
     padding: 10px 20px;
+    letter-spacing: 2px;
     background-color: hsl(5, 85%, 63%);
 }
 .new-class {
     background-color: black;
+    padding: 20px;
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
 }
 .new-class h1{
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
     color: hsl(35, 77%, 62%);
     font-weight: 800;
+    
 }
 
 .new-class .section h2 {
     color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: medium;   
+}
+
+.new-class .section p {
+    color: hsl(36, 100%, 99%);
+    font-family: 'Inter', sans-serif;
+    font-size: medium;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+hr {
+    margin: 30px 0px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row img {
+    height: 120px;
+    width: 100px;
+}
+
+.flex-col {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.flex-col h2 {
+    margin-top: 10px;
+}
+
+.flex-col p {
+    font-size: small;
+}
+
+@media (max-width:375px) {
+    .content {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
 }
