@@ -141,7 +141,6 @@ hr {
         grid-template-columns: repeat(1, 1fr);
     }
     
-
     .menu-icon {
         display: inline;
         width: 30px;
@@ -159,6 +158,9 @@ hr {
     .nav-opt {
         display: none;
     }
+    .navbar li {
+        display: block;
+    }
 
     .new-class {
         grid-column: 1;
@@ -167,12 +169,14 @@ hr {
     }
     .navbar li {
         display: inline;
-        z-index: 1000;
     }
 
     .icon {
         width: 30px;
         height: 22.5px;
+    }
+    .icon-close{
+        display: none;
     }
 
   }

@@ -18,11 +18,16 @@
 
   <script>
     function myFunction() {
-      document.querySelector("#icon-close").style.display = document.getElementById("icon-close").style.display==="none"?"inline":"none";
-      console.log(document.querySelector("#icon-close"))
-      document.querySelector("#menu-icon").style.display = document.getElementById("menu-icon").style.display==="none"?"inline":"none";
-      document.querySelector(".nav-opt").style.display = document.getElementById("nav-opt").style.display==="none"?"inline":"none";
+      console.log(document.getElementById("menu-icon").style.display)
+      document.querySelector("#icon-close").style.display = "none"
+      document.querySelector("#menu-icon").style.display = "inline";
+      document.querySelector(".nav-opt").style.display = "none"
 
+    }
+    function func(){
+      document.getElementById("menu-icon").style.display="none";
+      document.getElementById("icon-close").style.display="inline";
+      document.querySelector(".nav-opt").style.display = "inline"
     }
   </script>
   <div class="navbar">
@@ -38,7 +43,7 @@
           <li>Categories</li>
         </div>
       </ul>
-      <img onclick="myFunction()" src="./assets/images/icon-menu.svg" class="menu-icon" id="menu-icon"  alt="">
+      <img onclick="func()" src="./assets/images/icon-menu.svg" alt="" class="menu-icon" id="menu-icon" >
       <img onclick="myFunction()" src="./assets/images/icon-menu-close.svg" alt="" class="icon-close" id="icon-close">
     
   </div>
