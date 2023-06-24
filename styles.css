@@ -13,11 +13,14 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 0px;
 }
-.icon {
-    height: 50px;
+
+.navbar div {
+    border: 2px solid black;
 }
+
 .navbar li {
     list-style: none;
     display: inline-block;
@@ -86,6 +89,13 @@ body {
     font-weight: 300;
 }
 
+.menu-icon{
+    display: none;
+}
+.icon-close {
+    display: none;
+}
+
 hr {
     margin: 30px 0px;
 }
@@ -117,7 +127,9 @@ hr {
 .mobile-img{
     display: none;
 }
-
+#btnControl {
+    display: none;
+}
 .main_image {
     display: inline;
 }
@@ -128,9 +140,12 @@ hr {
         gap: 20px;
         grid-template-columns: repeat(1, 1fr);
     }
+    
 
-    .icon {
-        width: 20px;
+    .menu-icon {
+        display: inline;
+        width: 30px;
+        height: auto;
     }
     .main_image{
         display: none;
@@ -140,12 +155,24 @@ hr {
         display: inline;
         width: 100%;
     }
+
+    .nav-opt {
+        display: none;
+    }
+
     .new-class {
         grid-column: 1;
         grid-row-start: 3;
         grid-row-end: span 1;
     }
     .navbar li {
-        display: block;
+        display: inline;
+        z-index: 1000;
     }
+
+    .icon {
+        width: 30px;
+        height: 22.5px;
+    }
+
   }

@@ -17,24 +17,30 @@
 <body>
 
   <script>
-    function myFunction(e) {
-      document.getElementsByClassName("icon").style.display = document.getElementsByClassName("icon").style.display=="none"?"inline":"none";
-      document.getElementsByClassName("icon-close").style.display = document.getElementsByClassName("icon-close").style.display=="none"?"inline":"none";
+    function myFunction() {
+      document.querySelector("#icon-close").style.display = document.getElementById("icon-close").style.display==="none"?"inline":"none";
+      console.log(document.querySelector("#icon-close"))
+      document.querySelector("#menu-icon").style.display = document.getElementById("menu-icon").style.display==="none"?"inline":"none";
+      document.querySelector(".nav-opt").style.display = document.getElementById("nav-opt").style.display==="none"?"inline":"none";
 
     }
   </script>
   <div class="navbar">
-    <img src="./assets/images/logo.svg" alt="" class="icon">
-    <ul>
-
-      <li>Home</li>
-      <li>New</li>
-      <li>Popular</li>
-      <li>Trending</li>
-      <li>Categories</li>
-      <li onclick="myFunction()" class="icon"><img src="./assets/images/icon-menu.svg" class="icon" alt=""></li>
-      <li><img src="./assets/images/icon-menu-close.svg" alt="" class="icon-close"></li>
-    </ul>
+    
+      <img src="./assets/images/logo.svg" alt="" class="icon">
+    
+      <ul>
+        <div class="nav-opt">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </div>
+      </ul>
+      <img onclick="myFunction()" src="./assets/images/icon-menu.svg" class="menu-icon" id="menu-icon"  alt="">
+      <img onclick="myFunction()" src="./assets/images/icon-menu-close.svg" alt="" class="icon-close" id="icon-close">
+    
   </div>
   <div class="content">
     <img src="./assets/images/image-web-3-desktop.jpg" alt="image" class="main_image">
