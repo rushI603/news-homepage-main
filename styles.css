@@ -17,17 +17,17 @@ body {
     padding: 20px 0px;
 }
 
-.navbar div {
-    border: 2px solid black;
+.navbar ul {
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar li {
     list-style: none;
-    display: inline-block;
-    padding: 0 20px;
+    padding: 0 3%;
 }
 .navbar li:last-child {
-    padding-right: 0px;
+    padding-right: 100px;
 }
 
 .content {
@@ -127,7 +127,7 @@ hr {
 .mobile-img{
     display: none;
 }
-#btnControl {
+.checkbox {
     display: none;
 }
 .main_image {
@@ -139,6 +139,28 @@ hr {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .icon {
+        width: 30px;
+        height: 22.5px;
+    }
+    .icon-close{
+        width: 18px;
+        height: 18px;
+        display: none;
+    }
+
+    .checkbox:checked + label .icon-close{
+        display: inline;
+    }
+
+    .checkbox:checked + label .menu-icon{
+        display: none;
+    }
+
+    .checkbox:checked + label ul{
+        display: inline;
     }
     
     .menu-icon {
@@ -155,11 +177,16 @@ hr {
         width: 100%;
     }
 
-    .nav-opt {
-        display: none;
+    body {
+        padding: 0 2%;
     }
+
+    
     .navbar li {
         display: block;
+    }
+    .navbar ul{
+        display: none;
     }
 
     .new-class {
@@ -167,16 +194,20 @@ hr {
         grid-row-start: 3;
         grid-row-end: span 1;
     }
-    .navbar li {
-        display: inline;
+
+    .navbar ul {
+        background-color: white;
+        position: fixed;
+        right: 0;
+        padding-right: 100px;
+        top: 30px;
+        padding-top: 80px;
+        height: 100vh;
     }
 
-    .icon {
-        width: 30px;
-        height: 22.5px;
-    }
-    .icon-close{
-        display: none;
+    .navbar li {
+        padding: 15px;
+        display: block;
     }
 
   }
