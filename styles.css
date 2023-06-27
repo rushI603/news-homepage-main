@@ -12,6 +12,7 @@ body {
 
 .navbar {
     display: flex;
+    border: 2px solid black;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
@@ -20,14 +21,12 @@ body {
 .navbar ul {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .navbar li {
     list-style: none;
     padding: 0 3%;
-}
-.navbar li:last-child {
-    padding-right: 100px;
 }
 
 .content {
